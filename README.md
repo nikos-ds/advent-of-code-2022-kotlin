@@ -2,7 +2,7 @@
 
 [![Java CI with Gradle](https://github.com/wcchristian/advent-of-code-kotlin-starter/actions/workflows/gradle.yml/badge.svg)](https://github.com/wcchristian/advent-of-code-kotlin-starter/actions/workflows/gradle.yml)
 
-This repo houses my solutions for Advent of Code YYYY
+This repo houses my solutions for Advent of Code 2022
 
 https://adventofcode.com/
 
