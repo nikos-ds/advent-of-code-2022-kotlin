@@ -17,6 +17,7 @@ repositories {
 
 dependencies {
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
+    implementation("org.apache.commons:commons-lang3:3.12.0")
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 }
