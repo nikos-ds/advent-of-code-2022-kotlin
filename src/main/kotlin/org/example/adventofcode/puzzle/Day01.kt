@@ -8,7 +8,6 @@ object Day01 {
     fun printSolution() {
         println("- part 1: ${part1("/day-01-input.txt")}")
         println("- part 2: ${part2("/day-01-input.txt")}")
-        println("---")
     }
 
     private fun getTop3Descending(filePath: String): List<Int> {
