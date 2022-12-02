@@ -7,12 +7,8 @@ import org.example.adventofcode.puzzle.RockPaperScissors.SCISSORS
 import org.example.adventofcode.util.FileLoader
 
 private const val FILE_PATH = "/day-02-input.txt"
-private const val EXAMPLE_FILE_PATH = "/day-02-example.txt"
 
-private val MAPPINGS: Map<String, RockPaperScissors>
-    get() = mapOf(
-        "A" to ROCK, "B" to PAPER, "C" to SCISSORS
-    )
+private val MAPPINGS: Map<String, RockPaperScissors> = mapOf("A" to ROCK, "B" to PAPER, "C" to SCISSORS)
 
 enum class RockPaperScissors {
     ROCK {
@@ -85,13 +81,13 @@ object Day02 {
 
     private fun part2Selector(encodedSelection: String, opponent: RockPaperScissors): RockPaperScissors {
         return when (encodedSelection) {
-            "X" -> loseFor(opponent)
+            "X" -> loseAgainst(opponent)
             "Y" -> opponent // draw
-            else -> winFor(opponent)
+            else -> winAgainst(opponent)
         }
     }
 
-    private fun loseFor(opponent: RockPaperScissors): RockPaperScissors {
+    private fun loseAgainst(opponent: RockPaperScissors): RockPaperScissors {
         return when (opponent) {
             ROCK -> SCISSORS
             PAPER -> ROCK
@@ -99,7 +95,7 @@ object Day02 {
         }
     }
 
-    private fun winFor(opponent: RockPaperScissors): RockPaperScissors {
+    private fun winAgainst(opponent: RockPaperScissors): RockPaperScissors {
         return when (opponent) {
             ROCK -> PAPER
             PAPER -> SCISSORS
