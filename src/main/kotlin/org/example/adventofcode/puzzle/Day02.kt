@@ -12,28 +12,19 @@ private val MAPPINGS: Map<String, RockPaperScissors> = mapOf("A" to ROCK, "B" to
 
 enum class RockPaperScissors {
     ROCK {
-        override val superior: RockPaperScissors
-            get() = PAPER
-        override val inferior: RockPaperScissors
-            get() = SCISSORS
-        override val score: Int
-            get() = 1
+        override val superior: RockPaperScissors get() = PAPER
+        override val inferior: RockPaperScissors get() = SCISSORS
+        override val score = 1
     },
     PAPER {
-        override val superior: RockPaperScissors
-            get() = SCISSORS
-        override val inferior: RockPaperScissors
-            get() = ROCK
-        override val score: Int
-            get() = 2
+        override val superior: RockPaperScissors get() = SCISSORS
+        override val inferior: RockPaperScissors get() = ROCK
+        override val score = 2
     },
     SCISSORS {
-        override val superior: RockPaperScissors
-            get() = ROCK
-        override val inferior: RockPaperScissors
-            get() = PAPER
-        override val score: Int
-            get() = 3
+        override val superior: RockPaperScissors get() = ROCK
+        override val inferior: RockPaperScissors get() = PAPER
+        override val score = 3
     };
 
     abstract val superior: RockPaperScissors
@@ -57,7 +48,7 @@ object Day02 {
 
     private fun getTotalScore(playerSelector: (String, RockPaperScissors) -> RockPaperScissors): Int {
         val allLines = FileLoader.loadFromFile<String>(FILE_PATH)
-        var totalScore = 0;
+        var totalScore = 0
         for (line in allLines) {
             if (isBlank(line)) {
                 continue
