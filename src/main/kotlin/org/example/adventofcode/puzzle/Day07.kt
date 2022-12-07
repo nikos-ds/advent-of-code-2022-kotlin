@@ -46,8 +46,8 @@ object Day07 {
 
     fun printDir(directory: Directory, numberOfSpaces: Int) {
         println("${" ".repeat(numberOfSpaces)}- ${directory.name} (dir, size=${directory.size})")
-        directory.directories.forEach { dir -> printDir(dir, numberOfSpaces + 2) }
-        directory.files.forEach { file -> println("${" ".repeat(numberOfSpaces + 2)}- ${file.name}, (file, size=${file.size})") }
+        directory.directories.sortedBy { it.name }.forEach { dir -> printDir(dir, numberOfSpaces + 2) }
+        directory.files.sortedBy { it.name }.forEach { file -> println("${" ".repeat(numberOfSpaces + 2)}- ${file.name}, (file, size=${file.size})") }
     }
 
     fun collectAllDirectories(directories: MutableSet<Directory>, currentDirectory: Directory): Set<Directory> {
