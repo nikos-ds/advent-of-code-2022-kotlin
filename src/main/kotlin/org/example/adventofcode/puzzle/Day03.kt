@@ -15,7 +15,7 @@ object Day03 {
         val duplicateItems: MutableList<Char> = mutableListOf()
         for (line in allLines) {
             duplicateItems.add(
-                line.substring(0, line.length / 2).toCharArray()
+                line.substring(0, line.length / 2).toSet()
                     .intersect(line.substring(line.length / 2, line.length).toSet())
                     .first()
             )
@@ -29,7 +29,7 @@ object Day03 {
         val duplicateItems: MutableList<Char> = mutableListOf()
         for (i in allLines.indices step 3) {
             duplicateItems.add(
-                allLines[i].toCharArray()
+                allLines[i].toSet()
                     .intersect(allLines[i+1].toSet())
                     .intersect(allLines[i+2].toSet())
                     .first()
