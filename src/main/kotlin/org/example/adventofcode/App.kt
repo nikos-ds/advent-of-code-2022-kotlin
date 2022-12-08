@@ -1,8 +1,8 @@
 package org.example.adventofcode
 
-import org.example.adventofcode.puzzle.Day07
+import org.example.adventofcode.puzzle.Day08
 
 fun main() {
-    println("Day 7:")
-    Day07.printSolution()
+    println("Day 8:")
+    Day08.printSolution()
 }
